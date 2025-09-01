@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <style>
+      @font-face { font-family: 'Montserrat'; src: local('Montserrat'); }
+      @font-face { font-family: 'NotoKufi'; src: local('Noto Kufi Arabic'); }
+      @font-face { font-family: 'NotoNaskh'; src: local('Noto Naskh Arabic'); }
+      .bg-top { fill: #0B3F7A; }
+      .bg-bottom { fill: #F4A300; }
+      .white { fill: #ffffff; }
+      .brand { font-family: Montserrat, Arial, sans-serif; font-weight: 700; letter-spacing: 2px; }
+      .claim { font-family: Montserrat, Arial, sans-serif; font-weight: 600; }
+      .body { font-family: Montserrat, Arial, sans-serif; font-weight: 500; }
+      .ar { font-family: NotoKufi, 'Noto Naskh Arabic', Tahoma, sans-serif; }
+      .badge-stroke { fill: none; stroke: #138A36; stroke-width: 10; }
+    </style>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background split -->
+  <rect class="bg-top" x="0" y="0" width="900" height="700"/>
+  <rect class="bg-bottom" x="0" y="700" width="900" height="500"/>
+
+  <!-- Curved arc signature -->
+  <path d="M60,760 C260,600 640,600 840,760" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M100,820 C300,660 600,660 800,820" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.66"/>
+
+  <!-- Brand logo: G shaped wheat -->
+  <g transform="translate(110,180)">
+    <circle cx="120" cy="120" r="115" fill="#ffffff"/>
+    <path d="M120,35 a85,85 0 1 1 -0.1,170 a60,60 0 1 0 0-120" fill="#0B3F7A"/>
+    <g fill="#F4A300" transform="translate(120,70)">
+      <path d="M0,0 c30,40 30,100 0,140 c-28,-36 -28,-104 0,-140z"/>
+      <rect x="-8" y="-6" width="16" height="12" rx="6"/>
+    </g>
+  </g>
+
+  <!-- Brand name -->
+  <text x="320" y="220" class="brand white" font-size="96">GERMA</text>
+  <text x="320" y="280" class="ar white" font-size="58">جيرما</text>
+
+  <!-- Claims -->
+  <text x="110" y="360" class="claim white" font-size="44">Levure instantanée naturelle</text>
+  <text x="110" y="420" class="body white" font-size="30">Rendement élevé • Montée régulière</text>
+
+  <!-- Halal badge -->
+  <g transform="translate(700,180)">
+    <circle r="70" fill="#ffffff"/>
+    <circle r="64" fill="#ffffff" class="badge-stroke"/>
+    <text text-anchor="middle" y="8" font-size="28" class="body" fill="#138A36">HALAL</text>
+    <text text-anchor="middle" y="38" font-size="16" class="body" fill="#138A36">CERTIFIÉ</text>
+  </g>
+
+  <!-- Weight and sachets -->
+  <text x="110" y="980" class="brand white" font-size="42">125 g</text>
+  <text x="250" y="980" class="body white" font-size="34">5 × 25 g • Sachets fraîcheur</text>
+
+  <!-- Arabic mirrors -->
+  <text x="110" y="1040" class="ar white" font-size="34">خميرة فورية طبيعية</text>
+  <text x="110" y="1090" class="ar white" font-size="28">ارتفاع منتظم • أداء عالٍ</text>
+
+  <!-- Gloss highlight -->
+  <rect x="0" y="0" width="900" height="1200" fill="url(#shine)"/>
+</svg>
+

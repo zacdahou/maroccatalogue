@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Germa – Pack Mockup</title>
+    <style>
+      :root{
+        --cobalt:#0B3F7A; --saffron:#F4A300; --white:#ffffff; --halal:#138A36;
+      }
+      *{box-sizing:border-box} body{margin:0; font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f3f5f8; color:#111}
+      .stage{min-height:100vh; display:grid; place-items:center; padding:40px}
+      .pack{width:360px; height:540px; position:relative; transform-style:preserve-3d; transform:rotateY(-18deg) rotateX(6deg); animation:float 6s ease-in-out infinite alternate}
+      .side, .front, .top{position:absolute; inset:0; background:#ddd;}
+      .front{background:#fff url('./front-label.svg') center/cover no-repeat; transform:translateZ(40px)}
+      .side{width:80px; left:auto; right:-40px; transform:rotateY(90deg) translateZ(320px); background:linear-gradient(180deg,var(--cobalt),var(--saffron));}
+      .top{height:80px; top:-40px; transform:rotateX(90deg) translateZ(270px); background:linear-gradient(90deg,var(--cobalt) 40%,var(--white) 40% 60%,var(--saffron) 60%)}
+      .shadow{position:absolute; inset:auto 0 -120px 0; height:120px; filter:blur(28px); background:radial-gradient(closest-side, rgba(0,0,0,.28), transparent 70%);} 
+      @keyframes float{to{transform:rotateY(-22deg) rotateX(8deg) translateY(-6px)}}
+      .caption{margin-top:24px; text-align:center}
+      .specs{margin:6px 0 0; color:#444; font-size:14px}
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div>
+        <div class="pack" aria-label="Pack Germa 125 g">
+          <div class="front" title="Face avant Germa"></div>
+          <div class="side"></div>
+          <div class="top"></div>
+          <div class="shadow"></div>
+        </div>
+        <div class="caption">
+          <h1 style="margin:0 0 4px">Germa — Levure instantanée</h1>
+          <p class="specs">Brique 125 g • 5 × 25 g sachets • Halal</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+
