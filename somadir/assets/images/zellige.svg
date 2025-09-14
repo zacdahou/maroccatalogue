@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <title>Zellige pattern subtle</title>
+  <g fill="none" stroke="#0A2A66" stroke-opacity="0.08" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Central diamond -->
+    <path d="M60 12 L108 60 L60 108 L12 60 Z"/>
+    <!-- Inner star (octagram via two squares) -->
+    <path d="M38 38 L82 38 L82 82 L38 82 Z" transform="rotate(45 60 60)"/>
+    <rect x="38" y="38" width="44" height="44"/>
+    <!-- Corner mini diamonds -->
+    <path d="M22 30 L30 22 L38 30 L30 38 Z"/>
+    <path d="M82 30 L90 22 L98 30 L90 38 Z"/>
+    <path d="M22 90 L30 82 L38 90 L30 98 Z"/>
+    <path d="M82 90 L90 82 L98 90 L90 98 Z"/>
+    <!-- Connecting lines -->
+    <path d="M0 60 H120 M60 0 V120"/>
+    <circle cx="60" cy="60" r="3"/>
+  </g>
+</svg>
