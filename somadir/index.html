@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#0A2A66">
+    <meta name="description" content="Somadir · Accueil · La solution de référence">
+    <title>Somadir · Accueil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="site-header container" role="banner">
+        <div class="brand" aria-label="Somadir">
+            <div class="logo" aria-hidden="true">
+                <!-- Simple orange emblem as placeholder logo -->
+                <svg viewBox="0 0 64 64" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#F68B1F"/>
+                            <stop offset="100%" stop-color="#ffb25b"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="28" fill="url(#g)"/>
+                    <path d="M44 25c0-6.627-5.373-12-12-12S20 18.373 20 25c0 6.628 5.373 10.5 12 12 6.627 1.5 12 5.372 12 12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="titles">
+                <h1>SOMADIR</h1>
+                <p class="subtitle">La solution de référence</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main container" role="main">
+        <nav class="grid" aria-label="Navigation principale">
+            <a class="tile tile-produits" href="#produits" aria-label="Produits">
+                <span class="icon" aria-hidden="true">
+                    <!-- pain -->
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 28c0-8 7-14 18-14s18 6 18 14v8H6v-8z"/>
+                            <path d="M16 18c0-3 2-6 6-8M26 18c0-3 2-6 6-8"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="label">Produits</span>
+            </a>
+
+            <a class="tile tile-recettes" href="#recettes" aria-label="Recettes">
+                <span class="icon" aria-hidden="true">
+                    <!-- toque de chef -->
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22h24v10a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V22z"/>
+                            <path d="M10 18a8 8 0 0 1 8-8c2 0 3 .5 6 .5s4.1-.5 6-.5a8 8 0 0 1 8 8c0 1.1-.2 2.1-.6 3H10.6c-.4-.9-.6-1.9-.6-3z"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="label">Recettes</span>
+            </a>
+
+            <a class="tile tile-calculateur" href="#calculateur" aria-label="Calculateur">
+                <span class="icon" aria-hidden="true">
+                    <!-- calculatrice -->
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="10" y="6" width="28" height="36" rx="4" ry="4"/>
+                            <rect x="14" y="10" width="20" height="8" rx="2"/>
+                            <path d="M16 24h4M16 30h4M16 36h4M24 24h4M24 30h4M24 36h4M32 24h4M32 30h4M32 36h4"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="label">Calculateur</span>
+            </a>
+
+            <a class="tile tile-agences" href="#agences" aria-label="Agences">
+                <span class="icon" aria-hidden="true">
+                    <!-- épingle de localisation -->
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 44s14-13.4 14-24a14 14 0 1 0-28 0c0 10.6 14 24 14 24z"/>
+                            <circle cx="24" cy="20" r="5"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="label">Agences</span>
+            </a>
+
+            <a class="tile tile-contact" href="#contact" aria-label="Contact">
+                <span class="icon" aria-hidden="true">
+                    <!-- téléphone -->
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 8h6l3 8-4 3a24 24 0 0 0 12 12l3-4 8 3v6a4 4 0 0 1-4 4c-17.673 0-32-14.327-32-32a4 4 0 0 1 4-4z"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="label">Contact</span>
+            </a>
+        </nav>
+    </main>
+
+    <footer class="site-footer container" role="contentinfo">
+        <small>© <span id="year"></span> Somadir. Tous droits réservés.</small>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
