@@ -1,0 +1,164 @@
+/* Layout and components for Somadir Accueil */
+
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(10, 42, 102, 0.10), rgba(10, 42, 102, 0) 40%),
+    radial-gradient(800px 400px at -10% 100%, rgba(246, 139, 31, 0.12), rgba(246, 139, 31, 0) 40%),
+    url('../assets/images/zellige.svg'),
+    var(--color-background);
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: auto, auto, 120px 120px, auto;
+  background-position: center, center, 0 0, center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--color-secondary);
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.titles {
+  display: grid;
+}
+
+.brand-title {
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+  color: var(--color-muted);
+}
+
+main.container {
+  position: relative;
+  z-index: 1;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .icons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
+  }
+
+  /* Explicit placement (top-left, top-right, bottom-left, bottom-right, bottom-center) */
+  .pos-top-left { grid-column: 1; grid-row: 1; }
+  .pos-top-right { grid-column: 3; grid-row: 1; }
+  .pos-bottom-left { grid-column: 1; grid-row: 2; }
+  .pos-bottom-right { grid-column: 3; grid-row: 2; }
+  .pos-bottom-center { grid-column: 2; grid-row: 3; }
+}
+
+/* Mobile placement fallback: simple order that approximates the requested layout */
+.icon-card[data-position="haut gauche"] { order: 1; }
+.icon-card[data-position="haut droite"] { order: 2; }
+.icon-card[data-position="bas gauche"] { order: 3; }
+.icon-card[data-position="bas droite"] { order: 4; }
+.icon-card[data-position="bas centré"],
+.icon-card[data-position="bas centre"] { order: 5; grid-column: 1 / -1; }
+
+.icon-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(10, 42, 102, 0.22);
+}
+
+.icon-card:active {
+  transform: translateY(0);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(10, 42, 102, 0.06);
+  color: var(--color-primary);
+}
+
+.icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-label {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
