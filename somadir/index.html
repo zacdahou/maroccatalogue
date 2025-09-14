@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Somadir — Accueil</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <!-- Background pattern: subtle Moroccan zellij -->
+    <svg class="zellij-bg" aria-hidden="true" role="presentation" focusable="false" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <pattern id="zellij" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="80" height="80" fill="transparent"></rect>
+          <!-- 8-point star by overlaying two squares -->
+          <rect x="20" y="20" width="40" height="40" fill="none" stroke="#0A2A66" stroke-opacity="0.06" stroke-width="1"></rect>
+          <g transform="rotate(45 40 40)">
+            <rect x="20" y="20" width="40" height="40" fill="none" stroke="#0A2A66" stroke-opacity="0.06" stroke-width="1"></rect>
+          </g>
+          <!-- Connecting lines -->
+          <line x1="0" y1="40" x2="80" y2="40" stroke="#0A2A66" stroke-opacity="0.03" stroke-width="1"></line>
+          <line x1="40" y1="0" x2="40" y2="80" stroke="#0A2A66" stroke-opacity="0.03" stroke-width="1"></line>
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#zellij)"></rect>
+    </svg>
+
+    <header class="site-header" role="banner">
+      <div class="brand" aria-label="Logo Somadir">
+        <span class="logo-mark" aria-hidden="true">S</span>
+        <span class="logo-word" style="color:#F68B1F">SOMADIR</span>
+      </div>
+      <h1 class="app-title">SOMADIR</h1>
+      <p class="app-subtitle">La solution de référence</p>
+    </header>
+
+    <main class="container" role="main">
+      <section class="icon-grid" aria-label="Navigation principale">
+        <a class="icon-card produits" href="#produits" aria-label="Produits">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M4 14a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+            </svg>
+          </span>
+          <span class="label">Produits</span>
+        </a>
+
+        <a class="icon-card recettes" href="#recettes" aria-label="Recettes">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M6 12h12v2H6z"></path>
+              <path d="M6 10a4 4 0 0 1 4-4 4 4 0 0 1 6 0 4 4 0 0 1 4 4v2H6z"></path>
+              <rect x="8" y="14" width="8" height="6" rx="1"></rect>
+            </svg>
+          </span>
+          <span class="label">Recettes</span>
+        </a>
+
+        <a class="icon-card calculateur" href="#calculateur" aria-label="Calculateur">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+              <rect x="9" y="7" width="6" height="2" rx="1" fill="#F5E9D4"></rect>
+              <rect x="8" y="11" width="3" height="3" rx="0.5" fill="#F5E9D4"></rect>
+              <rect x="13" y="11" width="3" height="3" rx="0.5" fill="#F5E9D4"></rect>
+              <rect x="8" y="15" width="3" height="3" rx="0.5" fill="#F5E9D4"></rect>
+              <rect x="13" y="15" width="3" height="3" rx="0.5" fill="#F5E9D4"></rect>
+            </svg>
+          </span>
+          <span class="label">Calculateur</span>
+        </a>
+
+        <a class="icon-card agences" href="#agences" aria-label="Agences">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M12 2c-3.866 0-7 3.134-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+            </svg>
+          </span>
+          <span class="label">Agences</span>
+        </a>
+
+        <a class="icon-card contact" href="#contact" aria-label="Contact">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M6 3.5c2.2 6.4 8 12.2 14.5 14.5l1.6-2.8c.4-.7-.1-1.6-.9-1.7l-3.1-.4a1.8 1.8 0 0 0-1.6.9l-.7 1.3a16.7 16.7 0 0 1-5.1-5.1l1.3-.7c.6-.3.9-1 .9-1.6l-.4-3.1c-.1-.8-1-1.3-1.7-.9L6 3.5z"></path>
+            </svg>
+          </span>
+          <span class="label">Contact</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <small>© <span id="year"></span> Somadir. Tous droits réservés.</small>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+  </body>
+  </html>
+
